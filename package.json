@@ -1,0 +1,31 @@
+{
+  "name": "location-info",
+  "version": "0.1.0",
+  "description": "Open API location search application",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha src/**/__unit/*.js"
+  },
+  "engines": {
+    "node": "^8.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vacuumdreams/location-info.git"
+  },
+  "keywords": [
+    "open-api",
+    "nodejs",
+    "vue"
+  ],
+  "author": "Botond Fekete",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vacuumdreams/location-info/issues"
+  },
+  "homepage": "https://github.com/vacuumdreams/location-info#readme",
+  "dependencies": {
+    "restify": "^6.3.2",
+    "socket.io": "^2.0.4"
+  }
+}
