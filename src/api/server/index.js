@@ -1,9 +1,9 @@
-const { keys } = require('ramda')
+const { curry, keys } = require('ramda')
 const { createServer } = require('restify')
 const middlewares = require('./middlewares')
 const routes = require('./routes')
 
-module.exports = (config, services) => {
+module.exports = curry((config, services) => {
   const api = createServer()
   const mw = middlewares(config)
   const rt = routes(services)
@@ -16,6 +16,6 @@ module.exports = (config, services) => {
     })
   })
 
-  api.listen(config.server.port, () => console.log(`API listening on ${config.server.port}`))
-}
+  api.listen(config.port, () => console.log(`API listening on ${config.port}`))
+})
 

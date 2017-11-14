@@ -26,6 +26,7 @@
   "homepage": "https://github.com/vacuumdreams/location-info#readme",
   "dependencies": {
     "bluebird": "^3.5.1",
+    "node-fetch": "^1.7.3",
     "ramda": "^0.25.0",
     "restify": "^6.3.2",
     "restify-plugins": "^1.6.0",

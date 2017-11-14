@@ -1,4 +1,4 @@
 const { applySpec } = require('ramda')
-const get = require('./get')
+const post = require('./post')
 
-module.exports = applySpec({ get })
+module.exports = applySpec({ post })

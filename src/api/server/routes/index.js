@@ -1,9 +1,13 @@
 const { applySpec } = require('ramda')
 
 const user = require('./user')
-const place = require('./place')
+const userName = require('./user-name')
+const userLocation = require('./user-location')
+const placeAddress = require('./place-address')
 
 module.exports = applySpec({
-  user,
-  place,
+  'user': user,
+  'user/:name': userName,
+  'user/:name/location': userLocation,
+  'place/:address': placeAddress,
 })

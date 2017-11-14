@@ -1,0 +1,9 @@
+-- Up
+CREATE TABLE User (id INTEGER PRIMARY KEY, name TEXT);
+CREATE TABLE Location (id INTEGER PRIMARY KEY, userName INTEGER, address TEXT, lat TEXT, lng TEXT,
+  CONSTRAINT Location_userName FOREIGN KEY (userName)
+    REFERENCES User (name) ON UPDATE CASCADE ON DELETE CASCADE);
+
+-- Down
+DROP TABLE User
+DROP TABLE Location;

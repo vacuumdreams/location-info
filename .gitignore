@@ -2,6 +2,9 @@
 .DS_Store
 **/.DS_Store
 
+# DB
+src/api/data/db
+
 # NPM
 **/node_modules
 **/npm-debug.log
