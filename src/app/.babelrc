@@ -1,6 +1,13 @@
 {
-  "ignore": ["node_modules/**"],
   "presets": [
-    ["es2015", { "modules": false }]
-  ]
+    ["env", {
+      "modules": false
+    }],
+    "stage-2"
+  ],
+  "plugins": ["transform-runtime"],
+  "env": {
+    "test": {
+      "presets": ["env", "stage-2"]    }
+  }
 }

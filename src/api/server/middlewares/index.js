@@ -1,6 +1,17 @@
 const { bodyParser, fullResponse } = require('restify-plugins')
+const corsMiddleware = require('restify-cors-middleware')
 
-module.exports = config => ([
-  ...bodyParser(),
-  fullResponse()
-])
+const cors = corsMiddleware({
+  origins: ['*'],
+})
+
+module.exports = config => ({
+  pre: [
+    cors.preflight,
+  ],
+  use: [
+    ...bodyParser(),
+    fullResponse(),
+    cors.actual,
+  ],
+})

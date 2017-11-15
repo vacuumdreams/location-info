@@ -8,7 +8,9 @@ module.exports = curry((config, services) => {
   const mw = middlewares(config)
   const rt = routes(services)
 
-  api.use(mw)
+  keys(mw).forEach(method => {
+    api[method](mw[method])
+  })
 
   keys(rt).forEach(path => {
     keys(rt[path]).forEach(method => {
