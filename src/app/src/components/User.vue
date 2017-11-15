@@ -1,6 +1,5 @@
 <template>
   <div class="user-name">
-    {{userName}}
     <form v-on:submit="submit">
       <input type="text" placeholder="Your name" ref="user">
     </form>
@@ -44,5 +43,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+  form {
+    max-width: 800px;
+    margin: auto;
+    padding: 0.5em 1em;
+  }
 </style>

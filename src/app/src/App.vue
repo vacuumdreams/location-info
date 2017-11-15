@@ -38,12 +38,47 @@ export default {
 </script>
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+}
+
+input {
+  border: 1px solid #dedede;
+  border-radius: 0px;
+  padding: 0.5em 1em;
+  width: 100%;
+  font-size: 1em;
+}
+
+button {
+  background-color: #dedede;
+  border: none;
+  border-radius: 0px;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #d1d1d1;
+}
+
+svg.icon {
+  width: 1em;
+  height: 1em;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0px;
 }
 </style>
